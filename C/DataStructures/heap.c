@@ -84,41 +84,16 @@ void print_heap(int heap[]){
 
 // Example implemantation of the heap data structure.
 int main(){
-    insert(99, heap);
-    print_heap(heap);
-    insert(36, heap);
-    print_heap(heap);
-    insert(57, heap);
-    print_heap(heap);
-    insert(81, heap);
-    print_heap(heap);
-    insert(17, heap);
-    print_heap(heap);
-    insert(55, heap);
-    print_heap(heap);
-    insert(73, heap);
-    print_heap(heap);
-    insert(10, heap);
-    print_heap(heap);
-    insert(100, heap);
-    print_heap(heap);
+    int i;
+    int entries[9] = {99, 36, 57, 81, 17, 55, 73, 10, 100};
 
-    remove_top(heap);
-    print_heap(heap);
-    remove_top(heap);
-    print_heap(heap);
-    remove_top(heap);
-    print_heap(heap);
-    remove_top(heap);
-    print_heap(heap);
-    remove_top(heap);
-    print_heap(heap);
-    remove_top(heap);
-    print_heap(heap);
-    remove_top(heap);
-    print_heap(heap);
-    remove_top(heap);
-    print_heap(heap);
-    remove_top(heap);
-    print_heap(heap);
+    for(i=0; i<8; i++){
+        insert(entries[i], heap);
+        print_heap(heap);
+    }
+
+    for(i=0; i<8; i++){
+        remove_top(heap);
+        print_heap(heap);
+    }
 }
