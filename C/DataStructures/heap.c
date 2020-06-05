@@ -82,7 +82,7 @@ void print_heap(int heap[]){
     }
 }
 
-// Example implemantation of the heap data structure.
+// Example implementation of the heap data structure.
 int main(){
     int i;
     int entries[9] = {99, 36, 57, 81, 17, 55, 73, 10, 100};
