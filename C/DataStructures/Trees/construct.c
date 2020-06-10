@@ -8,6 +8,7 @@ typedef struct node{
     struct node *left;
 }node;
 
+//constructing the tree based on the pre-order and the symmetrical order
 void construct(int pre[], int sym[], int fp, int lp, int fs, int ls, node **root){
     int pos_sym, i, left_size, right_size;
     int key = pre[fp];
@@ -40,6 +41,24 @@ void construct(int pre[], int sym[], int fp, int lp, int fs, int ls, node **root
     }
 }
 
+//printing the symmetrical order
+void printsym(node *root){
+    if(root != NULL){
+        printsym(root->left);
+        printf("%d ", root->key);
+        printsym(root->right);
+    }
+}
+
+//printing the pre-order
+void printpre(node *root){
+    if(root != NULL){
+        printf("%d ", root->key);
+        printpre(root->left);
+        printpre(root->right);
+    }
+}
+
 //example
 int main(){
     node *root;
@@ -47,6 +66,10 @@ int main(){
     int sym[] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
 
     construct(pre, sym, 0, 9, 0, 9, &root);
+    printsym(root);
+    printf("\n");
+    printpre(root);
+    printf("\n");
 
     return 0;
 }
