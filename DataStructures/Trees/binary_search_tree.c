@@ -84,13 +84,13 @@ int main(){
     if(aux != NULL)
         printf("%d\n", aux->key);
     else
-        printf("Não tem essa chave na árvore.\n");
+        printf("This key isn't in the tree.\n");
   
     aux = search(75, root);
     if(aux != NULL)
         printf("%d\n", aux->key);
     else
-        printf("Não tem essa chave na árvore.\n");
+        printf("This key isn't in the tree.\n");
 
     return 0;
 }
